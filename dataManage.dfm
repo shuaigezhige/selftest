@@ -1,0 +1,56 @@
+object dataDelMan: TdataDelMan
+  Left = 0
+  Top = 0
+  Width = 650
+  Height = 540
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -19
+  Font.Name = #23435#20307
+  Font.Style = [fsBold]
+  ParentFont = False
+  TabOrder = 0
+  object NoteLable: TLabel
+    Left = 85
+    Top = 48
+    Width = 480
+    Height = 19
+    Caption = #26446#24635#65292#28165#31354#20043#21518#65292#21382#21490#35746#21333#25968#25454#23558#26080#27861#24674#22797#65292#35831#24910#29992#65281
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -19
+    Font.Name = #23435#20307
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DelRencBtn: TButton
+    Left = 244
+    Top = 128
+    Width = 161
+    Height = 25
+    Caption = #28165#31354#36817'3'#20010#26376#25968#25454
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = #23435#20307
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = DelRencBtnClick
+  end
+  object DelPastBtn: TButton
+    Left = 244
+    Top = 192
+    Width = 161
+    Height = 25
+    Caption = #28165#31354'3'#20010#26376#21069#25968#25454
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = #23435#20307
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = DelPastBtnClick
+  end
+end

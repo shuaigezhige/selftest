@@ -1,0 +1,242 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// resource ID
+//
+#define  IDS_TITLE                    10
+#define  IDS_NO_MOUSE                 11
+#define  IDS_TSERROR                  12
+#define  IDS_MOUSE_HOOK               13
+#define  IDS_LLKEY_HOOK               14
+#define  IDS_MOUSE_UNHOOK             15
+#define  IDS_LLKEY_UNHOOK             16
+#define  IDS_REGISTRY_ACCESS_ERROR    17
+#define  IDS_CANNOT_REGISTER_WIN      18
+#define  IDS_CANNOT_CREATE_TIP        19
+#define  IDS_CANNOT_CREATE_KB         20
+#define  IDS_CANNOT_CREATE_KEY        21
+#define  IDS_CANNOT_CREATE_DLG        22
+#define  IDS_CANNOT_LOAD_ICON         23
+#define  IDS_WEDSITE                  24
+#define  IDS_MAIL                     25
+#define  IDS_ENABLEWEB                26
+#define  IDS_TOOLTIP                  27
+
+#define  IDC_ICON                     30
+
+#define  IDC_CURHAND                  35
+
+#define  IDB_BITMAP                   40
+
+#define  WAV_CLICKDN                  50
+#define  WAV_CLICKUP                  51
+
+#define  BUT_MAIL                     60
+#define  IDC_TXT4                     61
+#define  IDC_TXT6                     62
+#define  IDC_TXT7                     63
+#define  BUT_UPGRADE                  64
+#define  BUT_WEBSITE                  65
+#define  IDC_SHOW_AGAIN               66
+#define  IDC_LOGO                     67
+#define  IDC_LOGO1                    68
+#define  IDC_WARNING_TEXT1            69
+#define  IDC_ABOUTDISCLAIMER          70
+#define  IDC_ENABLEWEB2               71
+#define  IDC_ENABLEWEB                72
+#define  IDC_WARND3                   73
+
+#define  IDD_ABOUT                    75
+#define  IDD_WARNING_MSG              76
+#define  IDD_UPGRADE                  77
+
+#define  IDM_EXIT                     80
+#define  IDM_ALWAYS_ON_TOP            81
+#define  IDM_HELPABOUT                82
+#define  IDM_HELPTOPICS               83
+#define  IDM_LARGE_KB                 84
+#define  IDM_SMALL_KB                 85
+#define  IDM_CLICK_SOUND              86
+#define  IDM_REGULAR_LAYOUT           87
+#define  IDM_BLOCK_LAYOUT             88
+#define  IDM_TYPE_MODE                89
+#define  IDM_SET_FONT                 90
+#define  IDM_JAPAN_LAYOUT             91
+#define  IDM_101_LAYOUT               92
+#define  IDM_102_LAYOUT               93
+#define  IDM_106_LAYOUT               94
+#define  IDM_ADDUM                    95
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// English (U.S.) resources
+//
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 251, 175
+  STYLE DS_MODALFRAME | DS_NOFAILCREATE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+  CAPTION "About On-Screen Keyboard"
+  FONT 8, "MS Shell Dlg"
+BEGIN
+  DEFPUSHBUTTON   "OK", IDOK, 192, 154, 52, 14
+  LTEXT           "For technical support, contact Microsoft.", IDC_TXT6, 7, 109, 237, 8
+  LTEXT           "Copyright ?1998, 1999 Madenta Inc.", IDC_TXT7, 7, 140, 235, 8
+  ICON            "APP_OSK", IDC_STATIC, 7, 7, 20, 20
+  LTEXT           "On-Screen Keyboard         version 1.x", IDC_STATIC, 40, 13, 129, 11
+  LTEXT           "by", IDC_STATIC, 7, 40, 23, 8
+  CONTROL         "", IDC_LOGO, "Static", SS_BITMAP, 35, 31, 15, 13
+  LTEXT           "On-Screen Keyboard is intended to provide a minimum level of functionality for mobility-impaired users. Mobility-impaired users will need a utility program with higher functionality for daily use.", IDC_ABOUTDISCLAIMER, 7, 54, 237, 29
+  PUSHBUTTON      "&Upgrade ...", BUT_UPGRADE, 194, 123, 50, 14
+  LTEXT           "For additional information or to upgrade, go to:", IDC_TXT4, 7, 123, 181, 11
+  CONTROL         "<A>http://www.microsoft.com/enable/</A>", IDC_ENABLEWEB2, "Link Window", WS_TABSTOP, 7, 93, 207, 12
+  LTEXT           "For a list of Windows-based accessibility utilities, see", IDC_WARND3, 7, 83, 207, 9
+END
+
+IDD_UPGRADE DIALOGEX 0, 0, 264, 141
+  STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+  CAPTION "Upgrade to ScreenDoors 98 (TM)"
+  FONT 8, "MS Shell Dlg", 0, 0
+BEGIN
+  DEFPUSHBUTTON   "&OK", IDOK, 205, 120, 52, 14, 0, WS_EX_TRANSPARENT
+  PUSHBUTTON      "&Madenta", BUT_MAIL, 58, 99, 72, 14, 0, WS_EX_TRANSPARENT
+  PUSHBUTTON      "&Upgrade Now", BUT_WEBSITE, 58, 76, 72, 14, 0, WS_EX_TRANSPARENT
+  LTEXT           "The Windows On-Screen Keyboard is a scaled - down version of a powerful product made by Madenta called ""ScreenDoors"", which contains many features that can significantly improve your productivity.", IDC_STATIC, 7, 30, 250, 27, 0, WS_EX_TRANSPARENT
+  LTEXT           "To upgrade to ScreenDoors, simply click on the button below:", IDC_STATIC,7,61,250,8,0,WS_EX_TRANSPARENT
+  LTEXT           "Email:", IDC_STATIC, 17, 102, 19, 8, 0, WS_EX_TRANSPARENT
+  LTEXT           "Web:", IDC_STATIC, 17, 79, 18, 8, 0, WS_EX_TRANSPARENT
+  CONTROL         "", IDC_LOGO1, "Static", SS_BITMAP, 7, 7, 15, 13, WS_EX_TRANSPARENT
+END
+
+IDD_WARNING_MSG DIALOG DISCARDABLE  0, 0, 250, 97
+  STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+  CAPTION "On-Screen Keyboard"
+  FONT 8, "MS Shell Dlg"
+BEGIN
+  DEFPUSHBUTTON   "OK", IDOK, 192, 76, 50, 14
+  LTEXT           "On-Screen Keyboard provides a minimum level of functionality for mobility-impaired users. Mobility-impaired users will need a utility program with higher functionality for daily use.", IDC_WARNING_TEXT1, 36, 9, 207, 34
+  ICON            "APP_OSK", IDC_ICON, 7, 8, 21, 20
+  CONTROL         "<A>http://www.microsoft.com/enable/</A>", IDC_ENABLEWEB, "Link Window", WS_TABSTOP, 36, 53, 207, 12
+  LTEXT           "For a list of Windows-based accessibility utilities, see", IDC_WARND3, 36, 43, 207, 9
+  CONTROL         "&Do not show this message again", IDC_SHOW_AGAIN, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 36, 78, 148, 13
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+IDR_MENU MENUEX DISCARDABLE
+BEGIN
+//  POPUP "&File"
+//  BEGIN
+//    MENUITEM "&Add to Utility Manager",     IDM_ADDUM,          MFT_STRING,     MFS_GRAYED
+//    MENUITEM SEPARATOR
+//    MENUITEM "E&xit",                       IDM_EXIT
+//  END
+//  POPUP "&Keyboard"
+//  BEGIN
+//    MENUITEM "&Enhanced Keyboard",          IDM_LARGE_KB,       MFT_RADIOCHECK, MFS_GRAYED | MFS_CHECKED
+//    MENUITEM "&Standard Keyboard",          IDM_SMALL_KB,       MFT_STRING,     MFS_GRAYED
+//    MENUITEM SEPARATOR
+//    MENUITEM "&Regular Layout",             IDM_REGULAR_LAYOUT, MFT_RADIOCHECK, MFS_GRAYED | MFS_CHECKED
+//    MENUITEM "&Block Layout",               IDM_BLOCK_LAYOUT,   MFT_STRING,     MFS_GRAYED
+//    MENUITEM SEPARATOR
+//    MENUITEM "10&1 keys",                   IDM_101_LAYOUT,     MFT_RADIOCHECK, MFS_GRAYED | MFS_CHECKED
+//    MENUITEM "10&2 keys",                   IDM_102_LAYOUT,     MFT_STRING,     MFS_GRAYED
+//    MENUITEM "10&6 keys",                   IDM_106_LAYOUT,     MFT_STRING,     MFS_GRAYED
+//  END
+  POPUP "&Settings"
+  BEGIN
+    MENUITEM "&Always on Top",              IDM_ALWAYS_ON_TOP
+    MENUITEM SEPARATOR
+    MENUITEM "&Use Click Sound",            IDM_CLICK_SOUND
+//    MENUITEM SEPARATOR
+//    MENUITEM "&Typing Mode ...",            IDM_TYPE_MODE,      MFT_STRING,     MFS_GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Font ...",                   IDM_SET_FONT
+  END
+//  POPUP "&Help"
+//  BEGIN
+//    MENUITEM "&Contents",                   IDM_HELPTOPICS
+//    MENUITEM SEPARATOR
+//    MENUITEM "&About On-Screen Keyboard...",IDM_HELPABOUT
+//  END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+IDC_CURHAND            CURSOR  DISCARDABLE     "H_point.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+WINLOGOUP               ICON    DISCARDABLE     "WinLogoUp.ico"
+I_WINLOGO               ICON    DISCARDABLE     "I_WinLogo.ico"
+
+MENUKEYUP               ICON    DISCARDABLE     "MenuKeyUp.ico"
+I_MENUKEY               ICON    DISCARDABLE     "I_MenuKey.ico"
+
+APP_OSK                 ICON    DISCARDABLE     "Liumazi.ico"
+LED_LIGHT               ICON    DISCARDABLE     "Led_Light.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+WAV_CLICKUP             WAVE    DISCARDABLE     "ClickUp.wav"
+WAV_CLICKDN             WAVE    DISCARDABLE     "ClickDn.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+IDB_BITMAP              BITMAP  DISCARDABLE     "Md_Logo.bmp"
+
+IDB_DOWN                BITMAP  DISCARDABLE     "Down.bmp"
+IDB_LEFT                BITMAP  DISCARDABLE     "Left.bmp"
+IDB_RIGHT               BITMAP  DISCARDABLE     "Right.bmp"
+IDB_UP                  BITMAP  DISCARDABLE     "Up.bmp"
+
+IDB_UPUPARW             BITMAP  DISCARDABLE     "UpUpArw.bmp"
+IDB_RHUPARW             BITMAP  DISCARDABLE     "RhUpArw.bmp"
+IDB_LFUPARW             BITMAP  DISCARDABLE     "LfUpArw.bmp"
+IDB_DNUPARW             BITMAP  DISCARDABLE     "DnUpArw.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_NO_MOUSE            "No mouse is installed. Program will quit."
+  IDS_TSERROR             "On-Screen Keyboard does not work in remote sessions."
+  IDS_REGISTRY_ACCESS_ERROR "Registry access error."
+  IDS_CANNOT_REGISTER_WIN   "Cannot register Window class."
+  IDS_CANNOT_CREATE_KB    "Cannot create Keyboard Window."
+  IDS_CANNOT_CREATE_KEY   "Error in create key."
+  IDS_CANNOT_CREATE_TIP   "Cannot create ToolTip."
+  IDS_CANNOT_CREATE_DLG   "Cannot create dialog."
+  IDS_CANNOT_LOAD_ICON    "Cannot load icon."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_MOUSE_HOOK          "Cannot install mouse hook."
+  IDS_LLKEY_HOOK          "Cannot install low-level keyboard hook."
+  IDS_MOUSE_UNHOOK        "Cannot uninstall mouse hook."
+  IDS_LLKEY_UNHOOK        "Cannot uninstall low-level keyboard hook."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_TITLE               "On-Screen Keyboard"
+  IDS_MAIL                "mailto:sales@madenta.com"
+  IDS_WEDSITE             "http://www.madenta.com/sd2k"
+  IDS_ENABLEWEB           "http://www.microsoft.com/enable/"
+  IDS_TOOLTIP             "Set focus to the application window into which you want to type."
+END
